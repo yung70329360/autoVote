@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.utils import ChromeType
 import numpy as np
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
@@ -1199,7 +1200,8 @@ def main():
  ]
     chrome_options = Options() 
     # chrome_options.add_argument('--headless') 
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+#     driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
+    driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()) 
     driver.maximize_window()
 
     name, email, password = get_inputs(names, driver)
