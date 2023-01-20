@@ -1,0 +1,6 @@
+streamlit
+time
+joblib
+selenium
+webdriver_manager
+numpy
