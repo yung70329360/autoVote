@@ -175,15 +175,15 @@ def secondPage(driver):
     next = xpathWait(driver, '//*[@id="create-account-submit"]').click()
 
 def thirdPage(driver):
-    driver.get('https://brandstorm.loreal.com/en/juries/vDmsA2-HS7z5FkDQYB6lQQ/participations/47/vote?order=random&amp;scope=all')
+    # driver.get('https://brandstorm.loreal.com/en/juries/vDmsA2-HS7z5FkDQYB6lQQ/participations/47/vote?order=random&amp;scope=all')
     # https://brandstorm.loreal.com/en/juries/vDmsA2-HS7z5FkDQYB6lQQ/participations/205/vote?order=random&amp;scope=all
-    xpathWait(driver, '//*[@id="challenge-37"]/div[1]/div[4]/div/div[2]/div[1]/div[4]/div/form/button').click()
-    
-    # xpathWait(driver , '//*[@id="jury-search"]').send_keys('Rebirth')
+    # xpathWait(driver, '//*[@id="challenge-37"]/div[1]/div[4]/div/div[2]/div[1]/div[4]/div/form/button').click()
+    time.sleep(5)
+    xpathWait(driver , '//*[@id="jury-search"]').send_keys('Rebirth')
     # xpathWait(driver , '//*[@id="jury-search"]').send_keys('MTK6')
-    # time.sleep(5)
-    # xpathWait(driver, '//*[@id="hits"]/div/div/div[2]/div[3]/div[1]/div/form/button').click()
-    # time.sleep(10)
+    time.sleep(5)
+    xpathWait(driver, '//*[@id="hits"]/div/div/div[2]/div[3]/div[1]/div/form/button').click()
+    time.sleep(5)
     # try:
     #     WebDriverWait(driver, 5).until(EC.presence_of_element_located(By.CSS_SELECTOR, ".link.text-danger"))
     #     like.click()
